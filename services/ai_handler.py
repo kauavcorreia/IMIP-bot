@@ -17,7 +17,7 @@ def pedir_desafio_ia(idade):
     Aja como um professor lúdico para uma criança de {idade} anos em um hospital.
     Gere UMA LISTA de 3 a 5 objetos simples (cada objeto com 4 a 6 letras).
     Retorne APENAS um JSON no formato:
-    {{"palavras": ["BOLA", "GATO", "PATO"], "dica": "Dica curta relacionada às palavras", "personagem_disse": "Oi amiguinho! Consegue completar essas?"}}
+    {{"palavras": ["BOLA", "PATO", "CAMISA", "BRINQUEDO", "LIVRO"], "dica": "Dica curta relacionada às palavras", "personagem_disse": "Oi amiguinho! Consegue completar essas?"}}
     """
 
     try:
