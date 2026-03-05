@@ -1,0 +1,43 @@
+body{
+    background: #47a1ea;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* centraliza vertical */
+    align-items: center;       /* centraliza horizontal */
+    height: 100vh;             /* ocupa 100% da tela */
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+    font-size: 100px;
+    color: #fff;
+    font-weight: 600;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+p{
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    padding-bottom: 20px; 
+}
+
+.btn{
+    background: #8a2fa3;
+    color: #fff;
+    font-weight: 500;
+    font-size: 22px; 
+    width: 200px;        /* largura menor */
+    height: 120px;       /* mesma altura da largura = quadrado */
+    border: 1px solid rgb(42, 214, 83);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+

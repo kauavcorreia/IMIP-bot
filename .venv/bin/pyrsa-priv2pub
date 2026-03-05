@@ -1,4 +1,4 @@
-#!/home/kaua/IMIP/.venv/bin/python
+#!/home/kaua/IMIP/.venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

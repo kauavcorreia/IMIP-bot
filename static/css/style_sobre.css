@@ -1,0 +1,16 @@
+body{
+    background: #47a1ea;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* centraliza vertical */
+    align-items: center;       /* centraliza horizontal */
+    height: 100vh;             /* ocupa 100% da tela */
+    margin: 0;
+}
+
+h2, h3{
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    padding-bottom: 20px; 
+}

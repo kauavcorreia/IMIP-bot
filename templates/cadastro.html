@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_cadastro.css') }}">
+    <title>Cadastro</title>
+</head>
+<body>
+    <p>Qual o seu nome?</p>
+    <input type="text" id="cad-nome"> <p>Quantos anos você tem?</p>
+    <input type="number" id="cad-idade"> <button class="btn2" onclick="realizarCadastro()">Finalizar Cadastro</button>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC - Jogo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_login.css') }}">
+    <style>
+        .palavra-display {
+            font-size: 80px;
+            color: #fff;
+            letter-spacing: 15px;
+            margin: 20px 0;
+            font-weight: bold;
+            text-shadow: 2px 2px #8a2fa3;
+        }
+        .dica-box {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+            margin-bottom: 20px;
+            max-width: 80%;
+        }
+        .estrelas-badge {
+            background: #f1c40f;
+            color: #000;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="estrelas-badge">
+        ⭐ Estrelas: <span id="total-estrelas">0</span>
+    </div>
+
+    <h1>Olá, <span id="nome-exibir">{{ nome_usuario }}</span>!</h1>
+    
+    <p id="msg-ia">O Robô está pensando num desafio...</p>
+
+    <div class="palavra-display" id="display-palavra">...</div>
+
+    <div class="dica-box">
+        <p>💡 <strong>Dica:</strong> <span id="texto-dica">...</span></p>
+    </div>
+
+    <p>Qual letra está faltando?</p>
+    <input type="text" id="input-resposta" maxlength="1" style="width: 80px; font-size: 40px;">
+    
+    <button class="btn2" onclick="enviarResposta()">Verificar!</button>
+
+    <script>
+        // Pegamos o ID que o Flask enviou e guardamos no navegador
+        const ID_CRIANCA = "{{ id_crianca }}";
+        if (ID_CRIANCA && ID_CRIANCA !== "None") {
+            localStorage.setItem('idCrianca', ID_CRIANCA);
+        }
+    </script>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    
+    <script>
+        // Inicia o jogo assim que a página carrega
+        window.onload = carregarDesafio;
+    </script>
+</body>
+</html>
